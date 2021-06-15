@@ -1,0 +1,19 @@
+.game {
+  #nonJudge {
+    h1 {
+      color: Pink;
+    }
+    p {
+      font-size: large;
+    }
+    #players {
+      margin-left: 5px;
+    }
+    & > .cards {
+      ul {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

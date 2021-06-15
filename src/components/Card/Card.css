@@ -1,0 +1,29 @@
+.card {
+  width: 125px;
+  height: 150px;
+  margin: 5px;
+  list-style: none;
+}
+
+.card p {
+  padding-left: 1em;
+  padding-top: 1em;
+  text-align: left;
+  color: #fff;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 2px 1px 5px #000;
+          box-shadow: 2px 1px 5px #000;
+}
+
+.OP {
+  background-color: blue;
+}
+
+.noShot {
+  background-color: black;
+}
+/*# sourceMappingURL=Card.css.map */

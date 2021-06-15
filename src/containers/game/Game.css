@@ -1,0 +1,22 @@
+.game #nonJudge h1 {
+  color: Pink;
+}
+
+.game #nonJudge p {
+  font-size: large;
+}
+
+.game #nonJudge #players {
+  margin-left: 5px;
+}
+
+.game #nonJudge > .cards ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=Game.css.map */
