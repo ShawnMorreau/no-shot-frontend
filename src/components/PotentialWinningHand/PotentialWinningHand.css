@@ -1,0 +1,27 @@
+#cardsPlayed{
+    width: 25vw;
+    text-align: center;
+    border: 1px solid black;
+    margin-right:1px;
+}
+#cardsPlayed ul {
+    list-style:lower-greek;
+}
+#cardsPlayed > ul > li {
+    font-size: 1.4em;
+}
+#cardsPlayed > .title {
+    font-size:2em;
+    margin:0;
+    padding:0;
+}
+
+#cardsPlayed > #redCard {
+    font-size: 1.4em;
+}
+
+#cardsPlayed > h3 {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: xx-large;
+}

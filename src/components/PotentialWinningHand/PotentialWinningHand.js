@@ -1,20 +1,18 @@
 import React from "react";
-import Card from "../Card/Card";
+import "./PotentialWinningHand.css";
 const PotentialWinningHand = ({ player, whiteCards, redCard }) => {
   const whiteCardsLi = whiteCards.map((card, idx) => (
     <li key={idx}>
-      {/* <Card value={card} type={"OP"} selectCard={() => console.log("ok.")} /> */}
       {card}
     </li>
   ));
-  
-//   const RedCard = <Card value={redCard} type={"noShot"} selectCard={() => console.log("K")} />;
-
   return (
-    <div>
+    <div id="cardsPlayed">
+      <p className="title"><u>OP Cards</u></p>
       <ul>{whiteCardsLi}</ul>
       <br/>
-      <p>{redCard}</p>
+      <p className="title"><u>No Shot Cards</u></p>
+      <p id="redCard">{redCard}</p>
       <h3>{player}</h3>
     </div>
   );

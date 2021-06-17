@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { connect, sendMsg } from "../../api/";
-import Chat from "../../components/Chat/ChatHistory";
 import Game from "../game/game";
-
+import "./room.css";
+import HowToPlay from "../../components/HowToPlay/HowToPlay"
 const CLIENT_CONNECTED = 2;
 const CLIENT_DISCONNECTED = 3;
 const END_OF_ROUND = 6;
 const END_GAME = 99;
 
 const Room = () => {
-  const [chatHistory, setChatHistory] = useState([]);
   const [players, setPlayers] = useState([]);
   const [gameStarted, setGameStarted] = useState(false);
   const [whoAmI, setWhoAmI] = useState(null);
@@ -24,7 +23,7 @@ const Room = () => {
 
 
   const people = players.map((player, idx) => {
-    return <li key={idx}>{player}</li>;
+    return <li className="players" key={idx}>{player}</li>;
   });
 
   const startGame = () => {
@@ -71,7 +70,6 @@ const Room = () => {
           setWhoAmI(decodedMessage.ID);
         }
 
-        setChatHistory([...chatHistory, msg]);
         if (
           decodedMessage.Type === CLIENT_CONNECTED ||
           decodedMessage.Type === CLIENT_DISCONNECTED
@@ -83,7 +81,6 @@ const Room = () => {
       }
     });
   }, [
-    chatHistory,
     players,
     host,
     whoAmI,
@@ -100,13 +97,13 @@ const Room = () => {
   return (
     <div>
       {!gameStarted && (
-        <>
+        <div id="lobby">
           <h1>{`Welcome to ${host}'s game ${whoAmI}`}</h1>
           <h3>Players</h3>
           <ul>{people}</ul>
-          {host === whoAmI && <button onClick={startGame}>Start Game</button>}
-          <Chat chatHistory={chatHistory}></Chat>
-        </>
+          {host === whoAmI && <button id="start" onClick={startGame}>Start Game</button>}
+          <HowToPlay/>
+        </div>
       )}
       {gameStarted === true && (
         <>

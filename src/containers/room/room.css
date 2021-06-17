@@ -1,0 +1,36 @@
+.players {
+    font-size: larger;
+}
+
+#lobby{
+    width:80vw;
+    height:100vh;
+    padding:0;
+    display: block;
+    margin: 0 auto;
+}
+
+#lobby > #start{
+    background-color:rgb(48, 221, 221);
+    height: 4em;
+    border: 0.2px solid #000;
+    font-size:1.2em;
+    box-shadow: 0px 4px 5px #000;
+    width:200px;
+    margin: 0 auto;
+    display: block;
+}
+#lobby > #start:hover{
+    transform: translate(0, 4px);
+    box-shadow: none;
+    border: none;
+}
+#lobby > h1 {
+    margin: 0 auto;
+    width: fit-content;
+}
+#lobby > h3 {
+    font-size:large;
+    padding: 0 0 0 15px;
+    margin: 5px 0;
+}

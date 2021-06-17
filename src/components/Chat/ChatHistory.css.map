@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,IAAI;CAMhB;;AATD,AAKI,YALQ,CAKR,EAAE,CAAA;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb",
-    "sources": [
-        "ChatHistory.scss"
-    ],
-    "names": [],
-    "file": "ChatHistory.css"
-}

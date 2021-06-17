@@ -19,4 +19,12 @@
       -ms-flex-direction: row;
           flex-direction: row;
 }
+
+.game #nonJudge #selected {
+  margin: 0;
+  height: 3em;
+  white-space: normal;
+  display: inline-block;
+  font-size: 2em;
+}
 /*# sourceMappingURL=Game.css.map */

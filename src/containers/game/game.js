@@ -114,13 +114,12 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
 
       {winner === "" && (players[judge].props.children !== whoAmI) && (
         <div id="nonJudge">
-          <h1>Game has started stupid mofo - {whoAmI}</h1>
-          <ul id="players">{players}</ul>
           <section className="cards">
             <ul>{noShot}</ul>
             <ul>{OP}</ul>
             <h4>Selected Cards</h4>
-            <ul>{selected}</ul>
+            <ul id="selected">{selected}</ul>
+            <br/>
             {players[turn].props.children === whoAmI && (
               <button onClick={() => playSelectedCards()}>Play Cards</button>
             )}

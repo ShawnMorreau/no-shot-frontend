@@ -1,23 +1,28 @@
 .card {
-    width: 125px;
-    height: 150px;
-    margin: 5px;
-    list-style: none;
-    
-    p{
-        padding-left: 1em;
-        padding-top: 1em;
-        text-align: left;
-        color: #fff;
-    }
+  width: 100px;
+  min-height: fit-content;
+  margin: 5px;
+  list-style: none;
+  padding: 0;
+
+  p {
+    padding: 0 0 0 4px;
+    margin: 0;
+    color: #fff;
+  }
 }
-.card:hover{
-    transform: translateY(-2px);
-    box-shadow: 2px 1px 5px #000;
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 1px 5px #000;
 }
-.OP{
-    background-color:blue;
+.cards {
+  margin: 0 auto;
+  width: 100vw;
+  padding: 0;
 }
-.noShot{
-    background-color:black;
+.OP {
+  background-color: blue;
+}
+.noShot {
+  background-color: black;
 }

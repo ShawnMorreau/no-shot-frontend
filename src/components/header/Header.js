@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header">
-      <h1>We Don't Love Fortnite</h1>
+      <h1>No Shot!</h1>
     </div>
   );
 };

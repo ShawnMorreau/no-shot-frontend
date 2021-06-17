@@ -15,5 +15,12 @@
         flex-direction: row;
       }
     }
+    #selected {
+      margin:0;
+      height: 3em;
+      white-space:normal;
+      display: inline-block;
+      font-size: 2em;
+    }
   }
 }

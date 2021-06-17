@@ -1,4 +1,5 @@
 import React from "react";
+import "./table.css";
 import PotentialWinningHand from "../../components/PotentialWinningHand/PotentialWinningHand";
 const Table = ({
   whoAmI,
@@ -17,7 +18,7 @@ const Table = ({
         whiteCards={player.WhiteCards}
         redCard={player.RedCard}
       />
-      <button
+      <button className="selectWinner"
         onClick={() => pickWinner(player.Player)}
         disabled={judge.props.children !== whoAmI}
         style={{
@@ -32,8 +33,8 @@ const Table = ({
     </li>
   ));
   return (
-    <div>
-      <h1>Judge - {judge}</h1>
+    <div id="table">
+      <h1>Judge - {judge.props.children}</h1>
       <ul>{playersPlayedCards}</ul>
     </div>
   );
