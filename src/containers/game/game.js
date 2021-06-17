@@ -81,12 +81,11 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
       case "end":
         sendMsg("game ended")
         break;
+      default:
+        console.error("something bad happened");
     }
   }
-  const selectWinner = player => {
-    selectWinner(player)
-    sendMsg(player + WINNER_DELIMITER)
-  }
+  
   return (
     <div className="game">
 

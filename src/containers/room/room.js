@@ -29,10 +29,6 @@ const Room = () => {
   const startGame = () => {
     sendMsg("start game");
   };
-  const endGame = () => {
-    sendMsg("game ended");
-    setGameStarted(false);
-  };
   useEffect(() => {
     connect((msg) => {
       let decodedMessage = JSON.parse(msg);
