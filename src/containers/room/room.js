@@ -7,6 +7,7 @@ const CLIENT_CONNECTED = 2;
 const CLIENT_DISCONNECTED = 3;
 const END_OF_ROUND = 6;
 const END_GAME = 99;
+const RANDOM_PING = 55;
 
 const Room = () => {
   const [players, setPlayers] = useState([]);
@@ -40,9 +41,10 @@ const Room = () => {
         decodedMessage.Type !== CLIENT_CONNECTED &&
         decodedMessage.Type !== CLIENT_DISCONNECTED &&
         decodedMessage.Type !== END_OF_ROUND &&
-        decodedMessage.Type !== END_GAME
+        decodedMessage.Type !== END_GAME &&
+        decodedMessage.Type !== RANDOM_PING
       ) {
-        if(decodedMessage.Body === "New Game Starting"){
+        if(decodedMessage.Body === "New Round Starting"){
           setWinner("")
         }
         setWhiteCards(decodedMessage.MyOpCards);

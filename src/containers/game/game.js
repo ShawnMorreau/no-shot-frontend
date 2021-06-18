@@ -97,8 +97,7 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
         action={action}
         selectWinner={(player) => sendMsg(player + WINNER_DELIMITER)}
       />
-
-
+      
       {(winner !== "" &&
         <>
           <h1>{winner} has won this round!</h1>

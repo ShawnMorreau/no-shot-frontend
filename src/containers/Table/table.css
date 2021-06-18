@@ -12,6 +12,7 @@
     list-style: none;
     justify-content: space-around;
 }
+
 #table > ul > li > .selectWinner {
     width: 100%;
     height: 2em;
