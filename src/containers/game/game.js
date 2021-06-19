@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react-dom";
 import { sendMsg } from "../../api";
 import Card from "../../components/Card/Card";
 import Table from "../../components/Table/table";
