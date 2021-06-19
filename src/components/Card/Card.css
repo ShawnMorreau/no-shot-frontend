@@ -1,15 +1,13 @@
 .card {
   width: 100px;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
+  min-height: 120px;
   margin: 5px;
   list-style: none;
   padding: 0;
 }
 
 .card p {
-  padding: 0 0 0 4px;
+  padding: 5px;
   margin: 0;
   color: #fff;
 }

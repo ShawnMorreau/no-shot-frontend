@@ -20,11 +20,23 @@
           flex-direction: row;
 }
 
+.game #nonJudge > .cards .cardIsSelected {
+  -webkit-box-shadow: 7px 7px 6px #925d5d;
+          box-shadow: 7px 7px 6px #925d5d;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
 .game #nonJudge #selected {
   margin: 0;
   height: 3em;
   white-space: normal;
   display: inline-block;
   font-size: 2em;
+}
+
+.game #nonJudge .typeOfCardText {
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=Game.css.map */

@@ -14,6 +14,10 @@
         display: flex;
         flex-direction: row;
       }
+      .cardIsSelected{
+        box-shadow: 7px 7px 6px rgb(146, 93, 93);
+        transform: translateY(-10px);
+      }
     }
     #selected {
       margin:0;
@@ -21,6 +25,11 @@
       white-space:normal;
       display: inline-block;
       font-size: 2em;
+    }
+    .typeOfCardText{
+      margin:0;
+      padding:0;
+      
     }
   }
 }

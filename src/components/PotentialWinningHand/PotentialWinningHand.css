@@ -1,14 +1,18 @@
 #cardsPlayed{
-    min-width: 33vw;
+    min-width: fit-content;
+    width: 30vw;
     text-align: center;
     border: 1px solid black;
     margin-right:1px;
+    display: inline-block;
 }
 #cardsPlayed ul {
-    list-style:lower-greek;
+    display: inline-block;
 }
 #cardsPlayed > ul > li {
     font-size: 1.4em;
+    padding:0;
+    margin:0;
 }
 #cardsPlayed > .title {
     font-size:2em;

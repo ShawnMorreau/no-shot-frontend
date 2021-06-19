@@ -1,6 +1,6 @@
 import React from "react";
 import "./table.css";
-import PotentialWinningHand from "../../components/PotentialWinningHand/PotentialWinningHand";
+import PotentialWinningHand from "../PotentialWinningHand/PotentialWinningHand";
 const Table = ({
   whoAmI,
   judge,

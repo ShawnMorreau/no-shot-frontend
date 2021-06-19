@@ -9,7 +9,9 @@
     display: block;
     margin: 0 auto;
 }
-
+#lobby > h1 > #whoAmI > u {
+    color: rgb(89, 124, 170);
+}
 #lobby > #start{
     background-color:rgb(48, 221, 221);
     height: 4em;

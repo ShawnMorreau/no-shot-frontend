@@ -96,10 +96,11 @@ const Room = () => {
     <div>
       {!gameStarted && (
         <div id="lobby">
-          <h1>{`Welcome to ${host}'s game ${whoAmI}`}</h1>
+          <h1>{`Welcome to ${host}'s game`}<span id="whoAmI"><u>{whoAmI}</u></span></h1>
           <h3>Players</h3>
           <ul>{people}</ul>
           {host === whoAmI && <button id="start" onClick={startGame}>Start Game</button>}
+          <br/>
           <HowToPlay/>
         </div>
       )}
