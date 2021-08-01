@@ -1,7 +1,7 @@
 import React from "react";
 import "./PotentialWinningHand.css";
-const PotentialWinningHand = ({ player, whiteCards, redCard }) => {
-  const whiteCardsLi = whiteCards.map((card, idx) => (
+const PotentialWinningHand = ({ID, OP, NoShot}) => {
+  const whiteCardsLi = OP.map((card, idx) => (
     <li key={idx}>
       {card}
     </li>
@@ -12,8 +12,8 @@ const PotentialWinningHand = ({ player, whiteCards, redCard }) => {
       <ul>{whiteCardsLi}</ul>
       <br/>
       <p className="title"><u>No Shot Cards</u></p>
-      <p id="redCard">{redCard}</p>
-      <h3>{player}</h3>
+      <p id="redCard">{NoShot}</p>
+      <h3>{ID}</h3>
     </div>
   );
 };

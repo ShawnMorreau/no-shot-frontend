@@ -14,12 +14,12 @@ const Table = ({
   const playersPlayedCards = playersAndCards.map((player, i) => (
     <li key={i}>
       <PotentialWinningHand
-        player={player.Player}
-        whiteCards={player.WhiteCards}
-        redCard={player.RedCard}
+        ID={player.ID}
+        OP={player.OP}
+        NoShot={player.NoShot}
       />
       <button className="selectWinner"
-        onClick={() => pickWinner(player.Player)}
+        onClick={() => pickWinner(player.ID)}
         disabled={judge.props.children !== whoAmI}
         style={{
           visibility:
@@ -28,7 +28,7 @@ const Table = ({
               : "hidden",
         }}
       >
-        {player.Player}
+        {player.ID}
       </button>
     </li>
   ));

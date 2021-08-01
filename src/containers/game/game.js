@@ -15,7 +15,6 @@ const WINNER_DELIMITER = "(k(*3@#";
 
 const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, cardsOnTable, host, winner, setWinner }) => {
   const [selectedCards, setSelectedCards] = useState([]);
-
   const selectCard = (card, type) => {
     if (action === "Choose noShot cards" && type === "noShot") {
       if (selectedCards.includes(card)) {
@@ -40,33 +39,32 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
       return false;
     }
   };
-  const test = e => {
+  const select = e => {
     let type = e.target.className.split(" ")[0];
     let value = e.target.children[0].innerHTML;
     let select = selectCard(value, type);
-    if (select) {
-      e.target.className += " cardIsSelected"
-    } else {
+    if(players[turn].props.children  === whoAmI){
+      select ? e.target.className += " cardIsSelected" :
       e.target.className = removeAnyExtraClassesOnCard(e.target.className)
     }
   }
   const noShot = noShotCards.map((card, id) => (
     <Card
       key={id}
-      value={card}
+      value={card.value}
       type="noShot"
       selectCard={selectCard}
-      clicked={test}
+      clicked={select}
     />
   ));
 
   const OP = OPCards.map((card, id) => (
     <Card
       key={id}
-      value={card}
+      value={card.value}
       type="OP"
       selectCard={selectCard}
-      clicked={test}
+      clicked={select}
     />
   ));
   const removeAnyExtraClassesOnCard = target => {
@@ -110,13 +108,6 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
         break;
     }
   };
-
-
-  
-
-
-  // const selected = selectedCards.map((card, idx) => <li key={idx}>{card}</li>);
-
   const selectOption = option => {
     switch (option) {
       case "continue":
@@ -130,8 +121,9 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
         console.error("something bad happened");
     }
   }
-
   return (
+    
+
     <div className="game">
       <Table
         whoAmI={whoAmI}
@@ -153,8 +145,6 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
           }
         </>
       )}
-
-
       {winner === "" && (players[judge].props.children !== whoAmI) && (
         <div id="nonJudge">
           <section className="cards">
@@ -167,18 +157,16 @@ const Game = ({ judge, whoAmI, OPCards, noShotCards, players, turn, action, card
               <ul>{OP}</ul>
             </div>
 
-
           </section>
           {players[turn].props.children === whoAmI && (
             <button id="playCards" onClick={() => playSelectedCards()}>Play Cards</button>
           )}
-          {/* <h4>Selected Cards</h4>
-            <ul id="selected">{selected}</ul> */}
         </div>
       )}
       {players[judge].props.children === whoAmI && <div></div>}
     </div>
-  );
+    );
+
 };
 
 export default Game;

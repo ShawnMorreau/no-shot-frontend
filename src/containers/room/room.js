@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect, sendMsg } from "../../api/";
 import Game from "../game/game";
 import "./room.css";
-import HowToPlay from "../../components/HowToPlay/HowToPlay"
+import HowToPlay from "../../components/HowToPlay/HowToPlay";
 const CLIENT_CONNECTED = 2;
 const CLIENT_DISCONNECTED = 3;
 const END_OF_ROUND = 6;
@@ -22,13 +22,22 @@ const Room = () => {
   const [cardsOnTable, setCardsOnTable] = useState(null);
   const [winner, setWinner] = useState("");
 
-
   const people = players.map((player, idx) => {
-    return <li className="players" key={idx}>{player}</li>;
+    return (
+      <li className="players" key={idx}>
+        {player}
+      </li>
+    );
   });
 
   const startGame = () => {
     sendMsg("start game");
+  };
+  const addBot = () => {
+    sendMsg(";'wp';");
+  };
+  const removeBot = () => {
+    sendMsg(";[];");
   };
   useEffect(() => {
     connect((msg) => {
@@ -44,8 +53,8 @@ const Room = () => {
         decodedMessage.Type !== END_GAME &&
         decodedMessage.Type !== RANDOM_PING
       ) {
-        if(decodedMessage.Body === "New Round Starting"){
-          setWinner("")
+        if (decodedMessage.Body === "New Round Starting") {
+          setWinner("");
         }
         setWhiteCards(decodedMessage.MyOpCards);
         setRedCards(decodedMessage.MyNoShotCards);
@@ -53,8 +62,8 @@ const Room = () => {
         setWhoseTurn(decodedMessage.TurnAndAction.Turn);
         setAction(decodedMessage.TurnAndAction.Action);
         setCardsOnTable(decodedMessage.CardsPlayed);
-      }else if(decodedMessage.Type === END_OF_ROUND){
-        setWinner(decodedMessage.Winner)
+      } else if (decodedMessage.Type === END_OF_ROUND) {
+        setWinner(decodedMessage.Winner);
       }
 
       if (!gameStarted) {
@@ -67,15 +76,12 @@ const Room = () => {
         if (whoAmI == null) {
           setWhoAmI(decodedMessage.ID);
         }
-
         if (
           decodedMessage.Type === CLIENT_CONNECTED ||
           decodedMessage.Type === CLIENT_DISCONNECTED
         ) {
           setPlayers(decodedMessage.Players);
         }
-
-        
       }
     });
   }, [
@@ -89,19 +95,36 @@ const Room = () => {
     gameStarted,
     action,
     cardsOnTable,
-    winner
+    winner,
   ]);
 
   return (
     <div>
       {!gameStarted && (
         <div id="lobby">
-          <h1>{`Welcome to ${host}'s game`}<span id="whoAmI"><u>{whoAmI}</u></span></h1>
+          <h1>
+            {`Welcome to ${host}'s game`}
+            <span id="whoAmI">
+              <u>{whoAmI}</u>
+            </span>
+          </h1>
           <h3>Players</h3>
           <ul>{people}</ul>
-          {host === whoAmI && <button id="start" onClick={startGame}>Start Game</button>}
-          <br/>
-          <HowToPlay/>
+          {host === whoAmI && (
+            <>
+              <button id="start" onClick={startGame}>
+                Start Game
+              </button>
+              <button id="addBot" onClick={addBot}>
+                Add Bot
+              </button>
+              <button id="removeBot" onClick={removeBot}>
+                Remove Bot
+              </button>
+            </>
+          )}
+          <br />
+          <HowToPlay />
         </div>
       )}
       {gameStarted === true && (
@@ -117,7 +140,7 @@ const Room = () => {
             cardsOnTable={cardsOnTable}
             host={host}
             winner={winner}
-            setWinner = {setWinner}
+            setWinner={setWinner}
           />
         </>
       )}
