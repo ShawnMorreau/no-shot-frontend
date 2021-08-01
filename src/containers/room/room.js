@@ -39,6 +39,9 @@ const Room = () => {
   const removeBot = () => {
     sendMsg(";[];");
   };
+  const pingHeroku = () => {
+    sendMsg("randomPing")
+  }
   useEffect(() => {
     connect((msg) => {
       let decodedMessage = JSON.parse(msg);
@@ -84,6 +87,10 @@ const Room = () => {
         }
       }
     });
+    setInterval(()=>{
+      pingHeroku()
+      console.log("lldlkwaoifowa")
+    }, 29000)
   }, [
     players,
     host,
