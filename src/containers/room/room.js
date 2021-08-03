@@ -73,7 +73,7 @@ const Room = () => {
         if (decodedMessage.GameStarted) {
           setGameStarted(true);
         }
-        if (host == null) {
+        if (host == null || host !== decodedMessage.Host) {
           setHost(decodedMessage.Host);
         }
         if (whoAmI == null) {
