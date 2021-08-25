@@ -1,11 +1,12 @@
 
-import Room from "./containers/room/room";
+import Lobby from "./containers/landingPage/landingPage"
 import "./app.css";
 function App() {
 
   return (
     <div className="App">
-      <Room />
+      <Lobby/>
+      {/* <Room /> */}
     </div>
   );
 }

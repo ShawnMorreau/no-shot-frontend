@@ -1,25 +1,34 @@
 import React from "react";
 import "./HowToPlay.css";
 const HowToPlay = () => {
-    return <p id="gameDescription"> 
-    Welcome to my game! No Shot!, a card game in which you create 
-    amazing scenarios for another person to sabotage! Each round 
-    a player will be chosen as a Judge and in a counter-clockwise order
-    each player will lay down two OP cards to create an amazing scenario for 
-    this judge. You will then be able to sabotage the player to your lefts scenario, 
-    in hopes that the judge will pick your scenario.<br/><br/>
-
-    The game is in early stages so there is still a lot of work to do to make it look like 
-    a solid finalized game, although, from my testing it is fully functional. On 
-    that note you may encounter bugs. If you'd like, you can take a screenshot and describe the bug 
-    and I will gladly investigate it. <b> shawn.morreau@gmail.com </b>
-    <br/><br/>
-    Ideally, there will be lobbys and private codes that you can send to your friends but I just wanted
-    to get something up and running initially and worry about after I have all the initial logic setup. 
-
-    Thanks and Enjoy!
-    
-    </p>
-}   
+  return (
+    <section className="gameDescription">
+      <h2>About</h2>
+      <p>
+        Welcome to my game! No Shot!, a card game in which you create the
+        perfect scenarios that will quickly become less than ideal when another
+        person sabotages you! Each round, a player will be chosen as a Judge and
+        in a counter-clockwise order each player will lay down two OP cards to
+        create an amazing scenario for this judge. You will then be able to
+        sabotage the player to your lefts scenario, in hopes that the judge
+        would still rather pick your set of OP cards.
+      </p>
+      <br />
+      <h3>Disclaimer</h3>
+      <p>
+        The game is in early stages so there is still a lot of work to do to
+        make it look like a solid finalized game, although, from my testing it
+        is fully functional. On that note you may encounter bugs.{" "}
+        <b>
+          It is also worth mentioning that the game it self will be best played
+          on desktop since I have barly had time to work out a layout for a
+          desktop let alone smaller screen sizes. Sorry for any inconveniences
+          that may bring.
+        </b>
+        Thank you, Enjoy!
+      </p>
+    </section>
+  );
+};
 
 export default HowToPlay;

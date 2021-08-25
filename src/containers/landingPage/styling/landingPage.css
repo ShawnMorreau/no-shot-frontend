@@ -1,0 +1,32 @@
+#gamesContainer {
+  margin: 0 auto;
+  border: 1px solid black;
+  list-style: none;
+  max-height: 200px;
+  width: 50vw;
+  overflow-y: scroll;
+  background-color: #2fa;
+}
+
+#gamesContainer #game {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #2fa;
+}
+
+#gamesContainer #game #info {
+  background-color: blue;
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#gamesContainer #game #info #joinRoom {
+  margin-left: auto;
+}
+/*# sourceMappingURL=landingPage.css.map */

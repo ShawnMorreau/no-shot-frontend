@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { connect, sendMsg } from "../../api/";
 import Game from "../game/game";
 import "./room.css";
-import HowToPlay from "../../components/HowToPlay/HowToPlay";
 const CLIENT_CONNECTED = 2;
 const CLIENT_DISCONNECTED = 3;
 const END_OF_ROUND = 6;
 const END_GAME = 99;
 const RANDOM_PING = 55;
+const LOBBY_PING = 1000 | 1001 | 1002
 
 const Room = () => {
   const [players, setPlayers] = useState([]);
@@ -54,7 +54,9 @@ const Room = () => {
         decodedMessage.Type !== CLIENT_DISCONNECTED &&
         decodedMessage.Type !== END_OF_ROUND &&
         decodedMessage.Type !== END_GAME &&
-        decodedMessage.Type !== RANDOM_PING
+        decodedMessage.Type !== RANDOM_PING &&
+        decodedMessage.Type !== LOBBY_PING &&
+        !gameStarted
       ) {
         if (decodedMessage.Body === "New Round Starting") {
           setWinner("");
@@ -89,7 +91,7 @@ const Room = () => {
     });
     setInterval(()=>{
       pingHeroku()
-      console.log("lldlkwaoifowa")
+      console.log("Heroku Ping")
     }, 29000)
   }, [
     players,
@@ -130,8 +132,7 @@ const Room = () => {
               </button>
             </>
           )}
-          <br />
-          <HowToPlay />
+          
         </div>
       )}
       {gameStarted === true && (

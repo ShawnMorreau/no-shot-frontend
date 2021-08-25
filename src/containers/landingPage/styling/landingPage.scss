@@ -1,0 +1,31 @@
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+
+#gamesContainer{
+    margin: 0 auto;
+    border: 1px solid black;
+    list-style: none;
+    max-height: 200px;
+    width: 50vw;
+    overflow-y: scroll;
+    background-color:#2fa;
+    #game{
+        width: 100%;
+        padding:0;
+        margin:0;
+        border: 1px solid #2fa;
+
+        #info{
+            background-color: blue;
+            color: white;
+            margin:0;
+            padding:0;
+            width: 100%;
+            display: flex;
+
+            #joinRoom{
+                margin-left: auto;
+            }
+        }
+    }
+}
