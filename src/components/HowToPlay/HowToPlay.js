@@ -14,7 +14,7 @@ const HowToPlay = () => {
     that note you may encounter bugs. If you'd like, you can take a screenshot and describe the bug 
     and I will gladly investigate it. <b> shawn.morreau@gmail.com </b>
     <br/><br/>
-    Ideally, there will be lobbys and private codes that you can send to your friends but I just wanted
+    Ideally, there will be lobbies and private codes that you can send to your friends but I just wanted
     to get something up and running initially and worry about after I have all the initial logic setup. 
 
     Thanks and Enjoy!
