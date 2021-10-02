@@ -110,7 +110,7 @@ const Room = () => {
       {!gameStarted && (
         <div id="lobby">
           <h1>
-            {`Welcome to ${host}'s game`}
+            {`Welcome to ${host}'s game `}
             <span id="whoAmI">
               <u>{whoAmI}</u>
             </span>

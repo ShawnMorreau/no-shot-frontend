@@ -1,5 +1,4 @@
 #cardsPlayed{
-    min-width: fit-content;
     width: 30vw;
     text-align: center;
     border: 1px solid black;
@@ -12,7 +11,8 @@
 #cardsPlayed > ul > li {
     font-size: 1.4em;
     padding:0;
-    margin:0;
+    margin:2px;
+    list-style: none;
 }
 #cardsPlayed > .title {
     font-size:2em;
