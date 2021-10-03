@@ -1,6 +1,6 @@
-var socket = new WebSocket("ws://localhost:5000/ws")
+// var socket = new WebSocket("ws://localhost:5000/ws")
 // var socket = new WebSocket("wss://murmuring-temple-10804.herokuapp.com/ws") old
-// var socket = new WebSocket("wss://morning-refuge-68385.herokuapp.com/ws");
+var socket = new WebSocket("wss://morning-refuge-68385.herokuapp.com/ws");
 let connect = (cb) => {
   socket.onopen = () => {
     console.log("Connected to server");
