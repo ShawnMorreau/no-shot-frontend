@@ -117,7 +117,7 @@ const Room = () => {
           </h1>
           <h3>Players</h3>
           <ul>{people}</ul>
-          {host === whoAmI && (
+          {/* {host === whoAmI && (
             <>
               <button id="start" onClick={startGame}>
                 Start Game
@@ -129,7 +129,7 @@ const Room = () => {
                 Remove Bot
               </button>
             </>
-          )}
+          )} */}
           <br />
           <HowToPlay />
         </div>
