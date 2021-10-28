@@ -30,9 +30,9 @@ const Room = () => {
     );
   });
 
-  // const startGame = () => {
-  //   sendMsg("start game");
-  // };
+  const startGame = () => {
+    sendMsg("start game");
+  };
   // const addBot = () => {
   //   sendMsg(";'wp';");
   // };
@@ -117,19 +117,19 @@ const Room = () => {
           </h1>
           <h3>Players</h3>
           <ul>{people}</ul>
-          {/* {host === whoAmI && (
+          {host === whoAmI && (
             <>
               <button id="start" onClick={startGame}>
                 Start Game
               </button>
-              <button id="addBot" onClick={addBot}>
+              {/* <button id="addBot" onClick={addBot}>
                 Add Bot
               </button>
               <button id="removeBot" onClick={removeBot}>
                 Remove Bot
-              </button>
+              </button> */}
             </>
-          )} */}
+          )}
           <br />
           <HowToPlay />
         </div>
