@@ -30,15 +30,15 @@ const Room = () => {
     );
   });
 
-  const startGame = () => {
-    sendMsg("start game");
-  };
-  const addBot = () => {
-    sendMsg(";'wp';");
-  };
-  const removeBot = () => {
-    sendMsg(";[];");
-  };
+  // const startGame = () => {
+  //   sendMsg("start game");
+  // };
+  // const addBot = () => {
+  //   sendMsg(";'wp';");
+  // };
+  // const removeBot = () => {
+  //   sendMsg(";[];");
+  // };
   const pingHeroku = () => {
     sendMsg("randomPing")
   }
