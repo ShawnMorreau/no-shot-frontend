@@ -1,9 +1,41 @@
 .game {
-  margin:0;
-  padding:0;
-  background-color:red;
+  margin: 0;
+  padding: 0;
+  background-color: #99d9d9;
   max-width: 100vw;
-  height:100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  #end {
+    max-width: 100%;
+    overflow: hidden;
+    & > .endContainer {
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px 0 20px;
+      & > h1,
+      p {
+        text-align: center;
+      }
+      & > h1 {
+        font-size: 3rem;
+      }
+      & > p {
+        font-size: 2rem;
+      }
+    }
+  }
+  .currentAction {
+    background-color: #ffedd1;
+    padding: 8px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #000;
+    margin-top: -15px;
+  }
   #nonJudge {
     h1 {
       color: Pink;
@@ -19,22 +51,24 @@
         display: flex;
         flex-direction: row;
       }
-      .cardIsSelected{
+      .cardIsSelected {
         box-shadow: 7px 7px 6px rgb(146, 93, 93);
         transform: translateY(-10px);
       }
     }
     #selected {
-      margin:0;
+      margin: 0;
       height: 3em;
-      white-space:normal;
+      white-space: normal;
       display: inline-block;
       font-size: 2em;
     }
-    .typeOfCardText{
-      margin:0;
-      padding:0;
-      
+    .typeOfCardText {
+      margin: 0;
+      padding: 0;
     }
   }
+}
+#red{
+  background-color:red;
 }

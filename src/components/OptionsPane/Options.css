@@ -1,0 +1,9 @@
+.optionsButtons{
+    margin: 0 auto;
+}
+.optionsButtons > button {
+    margin: 15px 5px 5px 5px;
+    height: 55px;
+    width: 100px;
+    background-color: rgba(0,0,0,0.1);
+}

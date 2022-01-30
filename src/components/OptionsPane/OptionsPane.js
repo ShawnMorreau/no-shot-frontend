@@ -1,15 +1,14 @@
 import React from "react";
-
+import "./Options.css"
 const OptionsPane = ({selectOption}) => {
   const clicked = option => {
       selectOption(option);
   }  
   return (
-    <>
-      <h3>Let's see... you got a couple options here</h3>
+    <div className="optionsButtons">
       <button onClick={()=>clicked("continue")}>Keep going</button>
       <button onClick={()=>clicked("end")}>End it here</button>
-    </>
+    </div>
   );
 };
 

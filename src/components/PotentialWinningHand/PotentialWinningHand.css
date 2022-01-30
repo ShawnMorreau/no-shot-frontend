@@ -1,10 +1,10 @@
 #cardsPlayed{
     width: 40vw;
-    text-align: center;
-    border: 1px solid black;
     margin-right:1px;
     display: inline-block;
-    min-height: 35vh;
+    min-height: 25vh;
+    box-shadow: -5px 5px 5px #000;
+    border: 1px solid black;
 }
 #cardsPlayed ul {
     display: inline-block;
@@ -20,14 +20,20 @@
     font-size:2em;
     margin:0;
     padding:0;
+    text-align: left;
+
 }
 
 #cardsPlayed > #redCard {
     font-size: 1.4em;
 }
 
-#cardsPlayed > h3 {
+#cardsPlayed > h3{
     width: fit-content;
     margin: 0 auto;
-    font-size: xx-large;
+    font-size: x-large;
+    text-align: center;
+}
+.OPTitle{
+    color: #ebb72e;
 }

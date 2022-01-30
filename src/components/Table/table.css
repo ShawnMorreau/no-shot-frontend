@@ -1,22 +1,44 @@
-#table{
-    width: 100vw;
-    height: fit-content;
+#table {
+  width: 100vw;
+  height: fit-content;
 }
-#table h1{
-    width: fit-content;
-    margin: 0 auto;
+#table h1 {
+  width: fit-content;
+  margin: 0 auto;
 }
-#table > ul{
-    display: flex;
-    margin-top: 5px;
-    list-style: none;
-    justify-content: space-around;
+#table > ul {
+  display: flex;
+  margin-top: 5px;
+  list-style: none;
+  justify-content: space-around;
 }
 
 #table > ul > li > .selectWinner {
-    width: 40vw;
-    height: 2em;
-    justify-content: center;
-    background-color:rgb(0, 0, 0);
-    color: #fff;
+  width: 40vw;
+  height: 2em;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#table > .judge {
+    display:flex;
+    flex-direction: column;
+}
+
+#table > .judge img{
+    display: inline-block;
+    width:300px;
+    margin: 0 auto;
+    border: 3px solid black;
+    box-shadow: -3px 2px 5px black;
+}
+#table > .judge h1{
+    font-size: 1.5rem;
+}
+#table .container{
+  display:flex;
+  flex-direction: column;
 }

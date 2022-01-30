@@ -1,0 +1,35 @@
+.endScreen {
+  display: flex;
+  max-width: 100vw;
+  width: 100vw;
+  min-height: 60vh;
+  justify-content: space-around;
+  // position: fixed;
+  bottom: 0;
+  
+  & > .options {
+    border-right: 5px solid black;
+    text-align: center;
+    width: 40vw;
+    font-size: x-large;
+    color: #fff;
+    text-shadow: 3px 3px 2px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & > .contactMe {
+    width: 60vw;
+    & > p {
+      padding: 0 15px;
+    }
+    h2 {
+      padding: 0 15px;
+    }
+    & > img {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

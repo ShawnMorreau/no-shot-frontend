@@ -1,9 +1,10 @@
 .card {
-  width: 100px;
-  min-height: 120px;
+  width: 110px;
+  min-height: 130px;
   margin: 5px;
   list-style: none;
   padding: 0;
+  border-radius: 10px;
 }
 
 .card p {
@@ -21,15 +22,19 @@
 
 .cards {
   margin: 0 auto;
-  width: 100vw;
+  max-width: 100vw;
   padding: 0;
 }
 
 .OP {
-  background-color: blue;
+  background-color: #ebb72e;
+}
+
+.OP > p {
+  color: #000;
 }
 
 .noShot {
-  background-color: black;
+  background-color: #000;
 }
 /*# sourceMappingURL=Card.css.map */

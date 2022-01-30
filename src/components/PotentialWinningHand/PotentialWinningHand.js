@@ -8,12 +8,12 @@ const PotentialWinningHand = ({ID, OP, NoShot}) => {
   ));
   return (
     <div id="cardsPlayed">
-      <p className="title"><u>OP Cards</u></p>
+      <h3><u>{ID}</u></h3>
+      <p className="title OPTitle">OP Cards</p>
       <ul>{whiteCardsLi}</ul>
       <br/>
-      <p className="title"><u>No Shot Cards</u></p>
+      <p className="title NSTitle">No Shot Cards</p>
       <p id="redCard">{NoShot}</p>
-      <h3>{ID}</h3>
     </div>
   );
 };

@@ -1,38 +1,87 @@
 .players {
-    font-size: larger;
+  font-size: larger;
+  list-style: none;
 }
 
-#lobby{
-    width:80vw;
-    height:100vh;
-    padding:0;
-    display: block;
-    margin: 0 auto;
+#lobby {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  background-color: #99d9d9;
 }
+#lobby > .title {
+  color: #fff;
+  font-size: 5rem;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);
+}
+#lobby > .description {
+  margin-top: -25px;
+  display: flex;
+  position: relative;
+  height: 150px;
+  margin-right: 80px;
+  justify-content: center;
+}
+#lobby > .description > .intro {
+  display: flex;
+  align-self: center;
+  text-align: justify;
+  margin-left: -50px;
+  color: #25314f;
+  font-size: 1.2rem;
+}
+
 #lobby > h1 > #whoAmI > u {
-    color: rgb(89, 124, 170);
+  color: rgb(89, 124, 170);
 }
-#lobby > #start{
-    background-color:rgb(48, 221, 221);
-    height: 4em;
-    border: 0.2px solid #000;
-    font-size:1.2em;
-    box-shadow: 0px 4px 5px #000;
-    width:200px;
-    margin: 0 auto;
-    display: block;
+#lobby > #startButton {
+  /* width: 200px;
+  height: 100px; */
+  margin: 0 auto;
+  display: block;
 }
-#lobby > #start:hover{
-    transform: translate(0, 4px);
-    box-shadow: none;
-    border: none;
+#lobby > #start {
+  background-color: rgb(48, 221, 221);
+  height: 4em;
+  border: 0.2px solid #000;
+  font-size: 1.2em;
+  box-shadow: 0px 4px 5px #000;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+#lobby > #start:hover {
+  transform: translate(0, 4px);
+  box-shadow: none;
+  border: none;
 }
 #lobby > h1 {
-    margin: 0 auto;
-    width: fit-content;
+  margin: 0 auto;
+  width: fit-content;
+}
+#lobby > h2 {
+  text-align: center;
+  margin: 10px 0 2px 0;
+  color: #25314f;
+}
+#lobby > ul {
+  text-align: center;
 }
 #lobby > h3 {
-    font-size:large;
-    padding: 0 0 0 15px;
-    margin: 5px 0;
+  font-size: large;
+  text-align: center;
+}
+#lobby > .container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -30px;
+}
+#lobby > .container > .players > h3{
+  text-align: center;
+}
+#lobby > .container .players {
+  width: 250px;
+  text-align: center;
 }

@@ -1,8 +1,55 @@
 .game {
   margin: 0;
-  padding: 5px;
+  padding: 0;
+  background-color: #99d9d9;
   max-width: 100vw;
-  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+}
+
+.game #end {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.game #end > .endContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px 0 20px;
+}
+
+.game #end > .endContainer > h1,
+.game #end > .endContainer p {
+  text-align: center;
+}
+
+.game #end > .endContainer > h1 {
+  font-size: 3rem;
+}
+
+.game #end > .endContainer > p {
+  font-size: 2rem;
+}
+
+.game .currentAction {
+  background-color: #ffedd1;
+  padding: 8px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px #000;
+          box-shadow: 2px 2px 1px #000;
+  margin-top: -15px;
 }
 
 .game #nonJudge h1 {
@@ -45,5 +92,9 @@
 .game #nonJudge .typeOfCardText {
   margin: 0;
   padding: 0;
+}
+
+#red {
+  background-color: red;
 }
 /*# sourceMappingURL=Game.css.map */
